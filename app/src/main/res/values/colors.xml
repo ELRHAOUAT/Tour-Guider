@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#24578B</color>
+    <color name="white">#fff</color>
+    <color name="vert">#2A8B24</color>
+    <color name="magenta">#9E269A</color>
+    <color name="orange">#DCBF2E</color>
+    <color name="background_white_color">#FFFFFF</color>
+    <color name="background_shadow_border">#707070</color>
+    <!--color for text icon menu-->
+    <color name="txt_color">#666666</color>
+</resources>
