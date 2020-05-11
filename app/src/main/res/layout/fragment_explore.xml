@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    tools:context=".vue.NadorActivity">
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/fragment_map"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -20,7 +19,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -59,7 +57,6 @@
 
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,35 +70,108 @@
                         android:layout_height="1dp"
                         android:background="#FF909090" />
                 </LinearLayout>
-
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/header"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="26dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/pasta_button"
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/custom_blue_button"
+                            android:drawableLeft="@drawable/drink"
+                            android:fontFamily="@font/segoe_print_fonts"
+                            android:paddingLeft="2dp"
+                            android:text="@string/drink"
+                            android:textAllCaps="false"
+                            android:textColor="#FFF"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/pizza_button"
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_blue_button"
+                            android:drawableLeft="@drawable/eat"
+                            android:fontFamily="@font/segoe_print_fonts"
+                            android:paddingLeft="2dp"
+                            android:text="@string/eat"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_color"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/salad_button"
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_blue_button"
+                            android:drawableLeft="@drawable/visit"
+                            android:fontFamily="@font/segoe_print_fonts"
+                            android:padding="2dp"
+                            android:text="@string/visit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_color"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/meat_button"
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_blue_button"
+                            android:drawableLeft="@drawable/sleep"
+                            android:fontFamily="@font/segoe_print_fonts"
+                            android:padding="2dp"
+                            android:text="@string/sleep"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_color"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/fries_button"
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_blue_button"
+                            android:drawableLeft="@drawable/travel"
+                            android:fontFamily="@font/segoe_print_fonts"
+                            android:paddingLeft="2dp"
+                            android:text="@string/travel"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue_color"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    android:textSize="32sp"
+                    android:textColor="@color/blue_color"
                     android:gravity="center">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0"
-                        android:fontFamily="@font/segoe_print_fonts"
-                        android:gravity="center"
-                        android:text="explore activity"
-                        android:textColor="#000"
-                        android:textSize="35sp" />
-
-                </LinearLayout>
-
+                </TextView>
             </LinearLayout>
 
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
-
 </RelativeLayout>

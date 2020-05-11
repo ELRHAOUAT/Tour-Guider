@@ -9,4 +9,5 @@
     <color name="background_shadow_border">#707070</color>
     <!--color for text icon menu-->
     <color name="txt_color">#666666</color>
+    <color name="blue_color">#9ECDF8</color>
 </resources>
