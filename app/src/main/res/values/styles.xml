@@ -8,9 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
     </style>
-    <style name="themebar" parent="Theme.AppCompat.Light.DarkActionBar">
 
-    </style>
 
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->

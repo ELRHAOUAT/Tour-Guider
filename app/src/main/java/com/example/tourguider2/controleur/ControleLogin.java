@@ -1,12 +1,9 @@
 package com.example.tourguider2.controleur;
 
 import android.content.Context;
-import android.widget.Switch;
 
 import com.example.tourguider2.modele.TouristLogin;
-import com.example.tourguider2.outils.MesOutiles;
 import com.example.tourguider2.outils.Serializer;
-import com.example.tourguider2.vue.LoginActivity;
 
 public class ControleLogin {
     private static String nomFicLogin = "saveLogin";
@@ -22,10 +19,6 @@ public class ControleLogin {
     public static final ControleLogin getInstance(Context contexte){
         if(ControleLogin.instance == null){
             ControleLogin.instance = new ControleLogin();
-            if (MesOutiles.checked){
-                recupSerialize(contexte);
-            }
-
         }
         return ControleLogin.instance;
     }

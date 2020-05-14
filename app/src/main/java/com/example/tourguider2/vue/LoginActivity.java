@@ -1,8 +1,5 @@
 package com.example.tourguider2.vue;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tourguider2.R;
 import com.example.tourguider2.controleur.ControleLogin;
@@ -86,12 +86,14 @@ public class LoginActivity extends AppCompatActivity {
                 String password=null;
                 boolean checked=true;
                 //Récupération des données
+
                 try {
                     email = editTextEmail.getText().toString();
                     password = editTextPassword.getText().toString();
                     checked=remeberMe.getShowText();
                 }catch (Exception e){}
                 //Contrôle de données
+
                 if(email == null || password == null|| email.equals("") || password.equals("")){
                     Toast.makeText(LoginActivity.this,"Saisie incorrecte",Toast.LENGTH_SHORT).show();
                 }
@@ -126,6 +128,7 @@ public class LoginActivity extends AppCompatActivity {
         if(controleLogin.getEmailLogin() != null){
             editTextEmail.setText(controleLogin.getEmailLogin());
             editTextPassword.setText(controleLogin.getPasswordLogin());
+            ((Button)findViewById(R.id.btnLogin)).performClick();
         }
     }
 }
