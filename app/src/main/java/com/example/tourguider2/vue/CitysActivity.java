@@ -40,10 +40,6 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         menuIcon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
         naviagtionDrawer();
-
-
-
-
     }
 
    private void exploreNador(){
