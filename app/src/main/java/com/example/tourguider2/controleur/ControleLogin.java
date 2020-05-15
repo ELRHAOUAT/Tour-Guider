@@ -19,6 +19,7 @@ public class ControleLogin {
     public static final ControleLogin getInstance(Context contexte){
         if(ControleLogin.instance == null){
             ControleLogin.instance = new ControleLogin();
+            recupSerialize(contexte);
         }
         return ControleLogin.instance;
     }
@@ -28,7 +29,7 @@ public class ControleLogin {
      * @param password
      * @param contexte
      */
-    public void getTouristLogin(String email, String password, Context contexte){
+    public void creerTouristLogin(String email, String password, Context contexte){
         touristLogin = new TouristLogin(email,password);
         Serializer.serialize(nomFicLogin,touristLogin,contexte);
     }
