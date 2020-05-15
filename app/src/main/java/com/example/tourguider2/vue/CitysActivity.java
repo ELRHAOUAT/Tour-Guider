@@ -2,27 +2,43 @@ package com.example.tourguider2.vue;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.tourguider2.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class CitysActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ImageView menuIcon;
+    LinearLayout contentView;
+    //Variables
+    static final float END_SCALE = 0.7f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citys);
         exploreNador();
+
+        drawerLayout=findViewById(R.id.drawer_layout);
+        navigationView=findViewById(R.id.nav_view);
+        menuIcon = findViewById(R.id.menu_icon);
+        contentView = findViewById(R.id.content);
+        naviagtionDrawer();
+
 
 
 
@@ -39,17 +55,9 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return true;
     }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        return false;
-    }
-
 
 
     @Override
@@ -76,6 +84,36 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         return true;
     }
 
+    private void naviagtionDrawer() {
+
+        //Naviagtion Drawer
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_account);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+
+
+    }
+
+
+
+    @Override
+    public void onBackPressed() {
+
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else
+            super.onBackPressed();
+    }
 
 
 
