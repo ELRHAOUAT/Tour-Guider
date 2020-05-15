@@ -59,7 +59,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         ((ImageButton)findViewById(R.id.imgBtnSaidia)).setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 /*
-                8888888888888888888888888888888888888==>Logout
+                888888888888888888888888888888888888==>Logout
                  */
                 SharedPreferences preferences = getSharedPreferences("switchCompat",MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
