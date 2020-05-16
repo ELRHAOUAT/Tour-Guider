@@ -1,6 +1,7 @@
 package com.example.tourguider2.vue;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,16 +33,13 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_citys);
         exploreNador();
+        exploreSaidia();
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         menuIcon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
         naviagtionDrawer();
-
-
-
-
     }
 
    private void exploreNador(){
@@ -50,6 +48,22 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
                 Intent intent = new Intent(CitysActivity.this, ExploreNadorActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+            }
+        });
+    }
+    private void exploreSaidia(){
+        ((ImageButton)findViewById(R.id.imgBtnSaidia)).setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View v){
+                /*
+                888888888888888888888888888888888888==>Logout
+                 */
+                SharedPreferences preferences = getSharedPreferences("switchCompat",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember","false");
+                editor.apply();
+                /*
+                8888888888888888888888888888888888888
+                 */
             }
         });
     }
