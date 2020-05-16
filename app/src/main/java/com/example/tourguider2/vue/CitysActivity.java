@@ -74,7 +74,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_lang:
-                Toast.makeText(this, "You clicked langage", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You clicked settings", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_wishlist:
                 Toast.makeText(this, "You clicked wish list", Toast.LENGTH_SHORT).show();
