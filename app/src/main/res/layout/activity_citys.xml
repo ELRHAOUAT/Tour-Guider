@@ -9,6 +9,7 @@
     tools:context=".vue.CitysActivity"
     tools:openDrawer="start"
     >
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_gravity="start"
@@ -18,27 +19,89 @@
         app:menu="@menu/main_menu"
         />
 
-    <LinearLayout
+
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="170dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginTop="8.5dp"
+                android:layout_marginBottom="8.5dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/menu"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="20dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="147dp"
+                android:layout_marginRight="147dp"
+                android:layout_marginBottom="16dp"
+                android:text="TourGuider"
+                android:textSize="20sp"
+                app:fontFamily="@font/baloo" />
+
+        </RelativeLayout>
 
         <ScrollView
+            android:id="@+id/scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0dp">
+            android:layout_height="714dp"
+            android:layout_below="@+id/bar"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Start your Journey"
+
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="35dp"
                     android:orientation="horizontal"
                     android:padding="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -69,12 +132,14 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnNador"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp" />
+                                android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/nador" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -99,12 +164,13 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnSaidia"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp" />
+                                android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -141,12 +207,13 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnTanger"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp" />
+                                android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -171,12 +238,13 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnKesh"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="15dp" />
+                                android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop" />
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -212,12 +280,13 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnTetouane"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop"
 
                                 tools:ignore="VectorDrawableCompat" />
                         </RelativeLayout>
@@ -244,12 +313,13 @@
                                 android:textSize="24sp"
                                 app:fontFamily="@font/baloo" />
 
-                            <ImageButton
+                            <ImageView
                                 android:id="@+id/imgBtnElhouciema"
                                 android:layout_width="150dp"
                                 android:layout_height="130dp"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="15dp"
+                                android:scaleType="centerCrop"
 
                                 tools:ignore="VectorDrawableCompat" />
                         </RelativeLayout>
@@ -261,75 +331,8 @@
 
 
         </ScrollView>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="16dp">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="398dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="16dp"
-
-            android:text="TourGuider"
-            android:textSize="30sp"
-            app:fontFamily="@font/baloo" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="394dp"
-            android:layout_height="31dp"
-            android:layout_marginStart="16dp"
-
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="5dp"
-
-            android:text="Start your Journey" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            >
-
-            <ImageView
-                android:id="@+id/menu_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="8.5dp"
-                android:layout_marginBottom="8.5dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/menu"
-
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="17dp"
-                tools:layout_editor_absoluteY="20dp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

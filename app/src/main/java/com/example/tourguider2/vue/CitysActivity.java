@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -17,6 +16,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.tourguider2.R;
+import com.example.tourguider2.manageProfile;
 import com.google.android.material.navigation.NavigationView;
 
 public class CitysActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +35,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         exploreNador();
         exploreSaidia();
 
+
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         menuIcon = findViewById(R.id.menu_icon);
@@ -43,7 +44,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
     }
 
    private void exploreNador(){
-        ((ImageButton)findViewById(R.id.imgBtnNador)).setOnClickListener(new Button.OnClickListener(){
+        ((ImageView)findViewById(R.id.imgBtnNador)).setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(CitysActivity.this, ExploreNadorActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -52,7 +53,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         });
     }
     private void exploreSaidia(){
-        ((ImageButton)findViewById(R.id.imgBtnSaidia)).setOnClickListener(new Button.OnClickListener(){
+        ((ImageView)findViewById(R.id.imgBtnSaidia)).setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 /*
                 888888888888888888888888888888888888==>Logout
@@ -68,8 +69,30 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         });
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+
+            case R.id.nav_account:
+                Intent intent = new Intent(CitysActivity.this, manageProfile.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_plans:
+                Toast.makeText(this, "You clicked plans", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_lang:
+                Toast.makeText(this, "You clicked settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_wishlist:
+                Toast.makeText(this, "You clicked wish list", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+
         return true;
     }
 
@@ -80,7 +103,9 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         switch(item.getItemId()){
 
             case R.id.nav_account:
-                Toast.makeText(this, "You clicked account", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CitysActivity.this, manageProfile.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 break;
 
             case R.id.nav_plans:
@@ -104,6 +129,7 @@ public class CitysActivity extends AppCompatActivity implements NavigationView.O
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_account);
+
 
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override

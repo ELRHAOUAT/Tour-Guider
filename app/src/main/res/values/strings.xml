@@ -3,13 +3,7 @@
     <string name="already_have_an_account">forgot password?</string>
 
 
-
-
-
     <string name="new_password_hint">New Password</string>
-
-
-
 
 
     <string name="title_activity_login">Sign in</string>
@@ -23,40 +17,67 @@
     <string name="login_failed">"Login failed"</string>
 
 
-
-
-
-    <!----><string name="txt_loading">Loading</string>
-    <!----><string name="titre_app">TOUR GUIDER</string>
-    <!----><string name="sing_in">Sign in</string>
-    <!----><string name="create_account">Create an account</string>
-    <!----><string name="describe">going out of your comfort zone to open yourself up the experience and beauty that life gives you, no matter what path path you choose to go on</string>
-    <!----><string name="skip"><u>SKIP</u></string>
-    <!----><string name="descover">There\'s a lot to discover</string>
-    <!----><string name="welcome_back">Welcome back,</string>
-    <!----><string name="email_hint">Email</string>
-    <!----><string name="password_hint">Password</string>
-    <!----><string name="remeber_me">Remeber me  </string>
-    <!----><string name="login_signup_hint">Don\'t have an account? <u>Sign Up</u></string>
-    <!----><string name="txtPassForgot"><u>Forgot password?</u></string>
-    <!----><string name="register">Sign Up for free</string>
-    <!----><string name="confirm_password_hint">Confirm Password</string>
-    <!----><string name="signup_login_hint">Already have an account? <u>Sign In</u></string>
-    <!----><string name="forgot_password">Forgot Your Password?</string>
-    <!----><string name="desc_password">Enter your email address you\'re using for your account below and we will send you a password reset link</string>
-    <!----><string name="email_forgot_password_hint">Type Your Email</string>
-    <!----><string name="Reset_password">Reset Your Password?</string>
-    <!----><string name="desc_reset_pass">Enter your new password for your TourGuider account.</string>
-    <!----><string name="drink">To Drink</string>
-    <!----><string name="eat">To Eat</string>
-    <!----><string name="visit">To Visit</string>
-    <!----><string name="sleep">To Sleep</string>
-    <!----><string name="travel">To Travel</string>
+    <!---->
+    <string name="txt_loading">Loading</string>
+    <!---->
+    <string name="titre_app">TOUR GUIDER</string>
+    <!---->
+    <string name="sing_in">Sign in</string>
+    <!---->
+    <string name="create_account">Create an account</string>
+    <!---->
+    <string name="describe">going out of your comfort zone to open yourself up the experience and beauty that life gives you, no matter what path path you choose to go on</string>
+    <!---->
+    <string name="skip"><u>SKIP</u></string>
+    <!---->
+    <string name="descover">There\'s a lot to discover</string>
+    <!---->
+    <string name="welcome_back">Welcome back,</string>
+    <!---->
+    <string name="email_hint">Email</string>
+    <!---->
+    <string name="password_hint">Password</string>
+    <!---->
+    <string name="remeber_me">Remeber me  </string>
+    <!---->
+    <string name="login_signup_hint">Don\'t have an account? <u>Sign Up</u></string>
+    <!---->
+    <string name="txtPassForgot"><u>Forgot password?</u></string>
+    <!---->
+    <string name="register">Sign Up for free</string>
+    <!---->
+    <string name="confirm_password_hint">Confirm Password</string>
+    <!---->
+    <string name="signup_login_hint">Already have an account? <u>Sign In</u></string>
+    <!---->
+    <string name="forgot_password">Forgot Your Password?</string>
+    <!---->
+    <string name="desc_password">Enter your email address you\'re using for your account below and we will send you a password reset link</string>
+    <!---->
+    <string name="email_forgot_password_hint">Type Your Email</string>
+    <!---->
+    <string name="Reset_password">Reset Your Password?</string>
+    <!---->
+    <string name="desc_reset_pass">Enter your new password for your TourGuider account.</string>
+    <!---->
+    <string name="drink">To Drink</string>
+    <!---->
+    <string name="eat">To Eat</string>
+    <!---->
+    <string name="visit">To Visit</string>
+    <!---->
+    <string name="sleep">To Sleep</string>
+    <!---->
+    <string name="travel">To Travel</string>
     <!---->
     <!--Label icons-->
-    <!----><string name="lbl_explore">Explore</string>
-    <!----><string name="lbl_map">Map</string>
-    <!----><string name="lbl_wish_list">Wish list</string>
-    <!----><string name="lbl_plans">Plans</string>
+    <!---->
+    <string name="lbl_explore">Explore</string>
+    <!---->
+    <string name="lbl_map">Map</string>
+    <!---->
+    <string name="lbl_wish_list">Wish list</string>
+    <!---->
+    <string name="lbl_plans">Plans</string>
 
 </resources>
